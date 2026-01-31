@@ -1,0 +1,13 @@
+# This creates/appends to a .gitignore file in your current folder
+cat <<EOT >> .gitignore
+# Ignore Terraform State
+*.tfstate
+*.tfstate.backup
+
+# Ignore Terraform Provider folder (where plugins are downloaded)
+.terraform/
+.terraform.lock.hcl
+
+# Ignore variable files containing secrets (Optional but recommended)
+*.tfvars
+EOT
